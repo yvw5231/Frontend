@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        * {
+            font-family: Calibri;
+        }
+
+        .page-header {
+            border-bottom: 1px solid #aaa8a8;
+            margin-bottom: 50px;
+            color: #3c3939;
+        }
+
+        #content {
+            position: absolute;
+            top: 50px;
+            left: 200px;
+            border: 1px solid black;
+            padding: 6px 20px;
+            box-shadow: #aaa8a8 10px 10px;
+            border-radius: 10px;
+            background-color: #b6d9f3;
+        }
+
+        [type='text'] {
+            display: block;
+            margin: 10px 0px 10px 0px;
+            padding: 5px;
+            min-width: 400px;
+        }
+
+        .btn {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            min-width: 80px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <script src="assignment2.js"></script>
+
+    <div id="content">
+        <h2 class="page-header">Commenting Board</h2>
+        <input type="text" id="nameID" placeholder="Enter your name" />
+        <input type="text" id="topicID" placeholder="Enter your comments' topic" />
+        <input type="number" min="0" max="5" id="rateID" maxlength="1" /> Please rate this product from 1 - 5 <br />
+        <textarea id="comment" maxlength="99" rows="6" cols="60" onkeypress="charCount()"></textarea>
+        <br />
+        Total Chars: <span id="textCount">0</span>/100
+        <br />
+        <input type="button" id="btnPost" onclick="postComment()" value="Post" class="btn btn-success" />
+        <br />
+        <span id="lstPosts"></span>
+        <span id="2ndPosts"></span>
+        <span id="3rdPosts"></span>
+        <span id="4thPosts"></span>
+    </div>
+
+</body>
+</html>
